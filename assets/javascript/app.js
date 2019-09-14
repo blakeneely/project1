@@ -13,7 +13,7 @@ function getNews(){
             var cardImage = $('<div>');
             cardImage.addClass('card-image');
             var imgFigure = $('<figure>');
-            imgFigure.addClass('image is-2by1');
+            imgFigure.addClass('image is-3by2');
             var image = $('<img>');
             var imgURL = response.articles[i].images[0].url;
             image.attr('src', imgURL);
