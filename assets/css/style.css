@@ -1,19 +1,20 @@
 .hero {
     background: black url("../../assets/images/field.jpeg") no-repeat 50% 50%;
     background-size: cover;
-}container {
+}
+.hero-container {
     max-width: 700px;
 }
 .news-container {
+    margin-top: 15px;
+    max-width: 1280px;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
-.hero-
 .card {
-    width: 300px;
+    width: 400px;
     height: auto;
     display: inline-block;
     margin: 10px;
