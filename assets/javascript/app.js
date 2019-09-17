@@ -1,5 +1,40 @@
 $(document).ready(function(){
 
+var firebaseConfig = {
+  apiKey: "AIzaSyBKleh1r8TfhZJqHg7qPSXzN6nj-U4CkqA",
+  authDomain: "project-1-7ff6c.firebaseapp.com",
+  databaseURL: "https://project-1-7ff6c.firebaseio.com",
+  projectId: "project-1-7ff6c",
+  storageBucket: "project-1-7ff6c.appspot.com",
+  messagingSenderId: "493534648100",
+  appId: "1:493534648100:web:c67669f74ff850900545b1"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database();
+
+function saveContact(){
+  event.preventDefault();
+  var name = $('#name-input').val().trim();
+  var email = $('#email-input').val().trim();
+  var message = $('#message-input').val().trim();
+  if ($('#name-input').val() === "" || $('#email-input').val() === "" || $('#message-input').val() === "") {
+    return false;
+  }
+  else {
+    var newContact = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    database.ref().push(newContact);
+  };
+  $('#name-input').val("");
+  $('#email-input').val("");
+  $('#message-input').val("");
+};
+
 function getStats(){
     $('.stats-container').empty();
     var userInput = $('#user-input').val().trim();
@@ -156,6 +191,7 @@ function getStats(){
         }
     });
   };
+
 function getNews(){
     var queryURL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news"
     $.ajax({
@@ -196,29 +232,9 @@ function getNews(){
         }
     });
 };
+
 getNews();
 $(document).on('click', '#submit', getStats);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$(document).on('click', '#contact-submit', saveContact);
 
 });
