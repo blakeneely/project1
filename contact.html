@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Huddle</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -41,30 +41,44 @@
                 <h1 class="title has-text-white has-text-weight-bold is-size-2">
                     A source of professional football news & stats
                 </h1>
-                <div class="control has-icons-left is-black">
-                    <input class="input is-medium is-rounded" type="text" placeholder="Search player or team" id="user-input">
-                    <span class="icon is-left">
-                        <i class="fas fa-search"></i>
-                    </span>
-                </div>
-                <p class="hero-p has-text-white">
-                    <strong class="has-text-white">Example: </strong>Antonio Brown, Tennessee Titans, Christian McCaffrey
-                </p>
-                <a class="hero-button button is-info is-rounded" id="submit">
-                    Submit
-                </a>
             </div>    
         </div>
     </section>
     <section>
-        <div class="stats-container container"></div>
-    </section>
-    <section>
-        <div class="news-container container"></div>
+        <div class="contact-container container">
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input class="input is-medium is-rounded" type="text" placeholder="Name" id="name-input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-medium is-rounded" type="email" placeholder="example@example.com" id="email-input">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                    <textarea class="textarea" id="message-input"></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <a class="hero-button button is-info is-rounded" id="contact-submit">
+                        Submit
+                    </a>
+                </div>
+            </div>
     </section>
     
    
-    
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
 </html>
