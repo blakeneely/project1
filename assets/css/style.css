@@ -5,6 +5,10 @@
 .hero-container {
     max-width: 700px;
 }
+.stats-container {
+    max-width: 1280px;
+    height: 100%;
+}
 .news-container {
     margin-top: 15px;
     max-width: 1280px;
@@ -21,4 +25,12 @@
 }
 .card-image img{
     object-fit: cover;
+}
+.stats-container {
+    max-width: 700px;
+    text-align: center;
+}
+.table {
+    margin-left: auto;
+    margin-right: auto;
 }
