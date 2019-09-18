@@ -57,7 +57,36 @@
         </div>
     </section>
     <section>
-        <div class="stats-container container"></div>
+        <div class="modal" id="test-modal">
+            <div class="modal-background stat-modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head stat-head">
+                    <p class="modal-card-title">2019 Stats</p>
+                    <button class="delete stats-delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body stat-text">
+                        <div class="stats-container container"></div>
+                </section>
+                <footer class="modal-card-foot stat-footer"></footer>
+            </div>
+        </div>
+        <div class="modal" id="warning-modal">
+            <div class="modal-background warning-modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head has-background-warning">
+                    <p class="modal-card-title">Error</p>
+                    <button class="delete warning-delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body warning-text">
+                        <p>
+                            Oops! We didn't find who you were looking for. Please check your spelling and try again.
+                        </p>
+                </section>
+                <footer class="modal-card-foot has-background-warning"></footer>
+            </div>
+        </div>
+        
+        <!-- <div class="stats-container container"></div> -->
     </section>
     <section>
         <div class="news-container container"></div>
